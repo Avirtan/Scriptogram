@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "lib": ["ESNext"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2017",
+    "sourceMap": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "src",
+    "strict": true,
+    "strictPropertyInitialization": false
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts", "dist"]
+}

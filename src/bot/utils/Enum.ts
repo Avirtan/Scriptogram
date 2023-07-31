@@ -1,0 +1,17 @@
+export enum TypeUpdate {
+  None = 1 << 0,
+  Message = 1 << 1,
+  EditedMessage = 1 << 2,
+  ChannelPost = 1 << 3,
+  EditedChannelPost = 1 << 4,
+  InlineQuery = 1 << 5,
+  ChosenInlineResult = 1 << 6,
+  CallbackQuery = 1 << 7,
+  ShippingQuery = 1 << 8,
+  PreCheckoutQuery = 1 << 9,
+  Poll = 1 << 10,
+  PollAnswer = 1 << 11,
+  MyChatMember = 1 << 12,
+  ChatMember = 1 << 13,
+  ChatJoinRequest = 1 << 14,
+}

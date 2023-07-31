@@ -1,0 +1,21 @@
+{
+  "name": "tbot",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node index.js",
+    "start:watch": "nodemon",
+    "prestart:prod": "tsc",
+    "start:prod": "node dist/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
