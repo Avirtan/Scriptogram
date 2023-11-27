@@ -1,25 +1,20 @@
-import axios from "axios";
+import { RequestHandler } from "../utils/RequestHandler";
+import { ISendMessage } from "./Types/ISendMessage";
 
 export class MethodHandler {
-  private _token: string;
-  private _baseUrl: string;
-  constructor(token: string) {
-    this._token = token;
-    this._baseUrl = `https://api.telegram.org/bot${this._token}/`;
+  private _requestHandler: RequestHandler;
+  constructor(requestHandler: RequestHandler) {
+    this._requestHandler = requestHandler;
   }
 
   public async getMe(): Promise<any> {
-    let response = await axios.get(`${this._baseUrl}getMe`);
-    return response.data;
+    let data = await this._requestHandler.getMethod("getMe");
+    return data;
   }
 
-  public async sendMessage(chat_id: number, text: string): Promise<any> {
-    let response = await axios.get(`${this._baseUrl}sendMessage`, {
-      data: {
-        chat_id,
-        text,
-      },
-    });
-    return response.data;
+  public async sendMessage(requestData: ISendMessage): Promise<any> {
+    console.log(requestData);
+    let data = await this._requestHandler.getMethod("sendMessage", requestData);
+    return data;
   }
 }

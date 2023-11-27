@@ -1,20 +1,26 @@
 import axios from "axios";
-import { IRespone } from "./types/IResponse";
+import { IRespone, IUpdate } from "./types/IResponse";
 import { IHandler } from "./handlers/IHandler";
-import { TypeUpdate } from "./utils/Enum";
 import { MethodHandler } from "./methods/MethodsHandler";
+import { RequestHandler } from "./utils/RequestHandler";
 
 export class TBot {
   private _id_update: number;
   private _token: string;
   private _handlers: Array<IHandler>;
+  private _funcHandler: Map<string, Function>;
   private _methodHandler: MethodHandler;
+  private _requestHandler: RequestHandler;
+  private _baseUrl: string;
 
   constructor(token: string) {
     this._id_update = 0;
     this._token = token;
     this._handlers = [];
-    this._methodHandler = new MethodHandler(token);
+    this._funcHandler = new Map<string, (update: IUpdate) => {}>();
+    this._baseUrl = `https://api.telegram.org/bot${this._token}/`;
+    this._requestHandler = new RequestHandler(this._baseUrl);
+    this._methodHandler = new MethodHandler(this._requestHandler);
   }
 
   private initHandlers() {
@@ -32,12 +38,11 @@ export class TBot {
             timeout: 50,
           },
         });
-        const responseJson = JSON.stringify(response.data);
-        const responeData: IRespone = JSON.parse(responseJson);
+        const responeData: IRespone = response.data as IRespone;
         if (responeData.result.length == 0) {
           continue;
         }
-        this._id_update = responeData.result[0]["update_id"] + 1;
+        this._id_update = responeData.result[responeData.result.length - 1].update_id + 1;
         yield responeData;
       } catch (e) {
         console.log("error " + e);
@@ -49,26 +54,22 @@ export class TBot {
     this._handlers.push(handler);
   }
 
+  public On(msg: string, func: (update: IUpdate) => void) {
+    this._funcHandler.set(msg, func);
+  }
+
   public async StartUpdate() {
-    let typeUpdate: TypeUpdate;
-    let data;
     this.initHandlers();
     for await (const response of this) {
       for (const update of response.result) {
-        if (update.inline_query != null) {
-          data = update.inline_query;
-          typeUpdate = TypeUpdate.InlineQuery;
-        }
         if (update.message != null) {
-          data = update.message;
-          typeUpdate = TypeUpdate.Message;
+          if (this._funcHandler.has(update.message.text)) {
+            let func = this._funcHandler.get(update.message.text);
+            func!(update);
+          }
         }
-        var filterHandlers = this._handlers.filter((value: IHandler) => {
-          console.log(value.typeMask | typeUpdate);
-          return value.typeMask | typeUpdate;
-        });
-        for (const handler of filterHandlers) {
-          handler.action(data);
+        for (const handler of this._handlers) {
+          handler.action(update);
         }
       }
     }

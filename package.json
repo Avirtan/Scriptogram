@@ -1,7 +1,9 @@
 {
-  "name": "tbot",
+  "name": "scriptogram",
   "version": "1.0.0",
   "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon",
