@@ -7,6 +7,7 @@
 export interface IBotCommandScopeAllChatAdministrators {
   /**
    * Тип области видимости, должен быть all_chat_administrators.
+   *
    * Scope type, must be all_chat_administrators.
    */
   type: string;

@@ -9,6 +9,7 @@
 export interface IBotCommandScopeDefault {
   /**
    * Тип области видимости, должен быть default.
+   *
    * Scope type, must be default.
    */
   type: string;

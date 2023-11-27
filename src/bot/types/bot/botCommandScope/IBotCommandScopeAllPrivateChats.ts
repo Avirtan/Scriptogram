@@ -7,6 +7,7 @@
 export interface IBotCommandScopeAllPrivateChats {
   /**
    * Тип области видимости, должен быть all_private_chats.
+   *
    * Scope type, must be all_private_chats.
    */
   type: string;

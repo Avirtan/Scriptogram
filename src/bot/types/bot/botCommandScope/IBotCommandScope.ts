@@ -9,6 +9,7 @@ import { IBotCommandScopeDefault } from "./IBotCommandScopeDefault";
 /**
  * Этот объект представляет область применения команд бота.
  * В настоящее время поддерживается следующие 7 областей:
+ *
  * BotCommandScopeDefault,
  *
  * BotCommandScopeAllPrivateChats,

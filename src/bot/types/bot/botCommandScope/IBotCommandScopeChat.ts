@@ -7,6 +7,7 @@
 export interface IBotCommandScopeChat {
   /**
    * Тип области видимости, должен быть chat.
+   *
    * Scope type, must be chat.
    */
   type: string;
@@ -14,6 +15,7 @@ export interface IBotCommandScopeChat {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевой супергруппы
    * (в формате @supergroupusername).
+   *
    * Unique identifier for the target chat or username of the target supergroup
    * (in the format @supergroupusername).
    */

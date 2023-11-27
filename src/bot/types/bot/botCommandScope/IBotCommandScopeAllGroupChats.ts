@@ -7,6 +7,7 @@
 export interface IBotCommandScopeAllGroupChats {
   /**
    * Тип области видимости, должен быть all_group_chats.
+   *
    * Scope type, must be all_group_chats.
    */
   type: string;
