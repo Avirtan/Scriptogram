@@ -1,5 +1,6 @@
 /**
  * При получении сообщения с этим объектом, клиенты Telegram отображают пользователю интерфейс ответа (как если бы пользователь выбрал сообщение бота и нажал "Ответить"). Это может быть крайне полезно, если вы хотите создать удобные пошаговые интерфейсы, не отказываясь от режима конфиденциальности.
+ *
  * Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot's message and tapped 'Reply'). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode.
  * @see {@link https://core.telegram.org/bots/api#forcereply}
  */

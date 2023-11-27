@@ -14,13 +14,13 @@ export interface IPollAnswer {
    * Опционально. Чат, который изменил ответ на опрос, если пользователь анонимен.
    * Optional. The chat that changed the answer to the poll, if the voter is anonymous.
    */
-  voter_chat?: IChat; // Вам нужно создать интерфейс IChat или использовать уже созданный, если у вас есть.
+  voter_chat?: IChat;
 
   /**
    * Опционально. Пользователь, который изменил ответ на опрос, если пользователь не анонимен.
    * Optional. The user that changed the answer to the poll, if the voter isn't anonymous.
    */
-  user?: IUser; // Вам нужно создать интерфейс IUser или использовать уже созданный, если у вас есть.
+  user?: IUser;
 
   /**
    * Идентификаторы выбранных вариантов ответа (начиная с 0). Могут быть пустыми, если голос был отозван.

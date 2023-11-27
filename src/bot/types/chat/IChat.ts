@@ -50,7 +50,7 @@ export interface IChat {
    * Опционально. Фотография чата. Возвращается только в getChat.
    * Optional. Chat photo. Returned only in getChat.
    */
-  photo?: ChatPhoto;
+  photo?: IChatPhoto;
 
   /**
    * Опционально. Если непустой, список всех активных имен пользователей чата; для приватных чатов, супергрупп и каналов. Возвращается только в getChat.
@@ -116,13 +116,13 @@ export interface IChat {
    * Опционально. Наиболее недавнее закрепленное сообщение (по дате отправки). Возвращается только в getChat.
    * Optional. The most recent pinned message (by sending date). Returned only in getChat.
    */
-  pinned_message?: Message;
+  pinned_message?: IMessage;
 
   /**
    * Опционально. По умолчанию разрешения участников чата, для групп и супергрупп. Возвращается только в getChat.
    * Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat.
    */
-  permissions?: ChatPermissions;
+  permissions?: IChatPermissions;
 
   /**
    * Опционально. Для супергрупп, минимальная разрешенная задержка между последовательными сообщениями, отправляемыми каждым непривилегированным пользователем; в секундах. Возвращается только в getChat.
@@ -176,21 +176,5 @@ export interface IChat {
    * Опционально. Для супергрупп, местоположение, с которым связана супергруппа. Возвращается только в getChat.
    * Optional. For supergroups, the location to which the supergroup is connected. Returned only in getChat.
    */
-  location?: ChatLocation;
+  location?: IChatLocation;
 }
-
-// interface ChatPhoto {
-//   // Описание полей для ChatPhoto
-// }
-
-// interface Message {
-//   // Описание полей для Message
-// }
-
-// interface ChatPermissions {
-//   // Описание полей для ChatPermissions
-// }
-
-// interface ChatLocation {
-//   // Описание полей для ChatLocation
-// }

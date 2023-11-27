@@ -8,13 +8,13 @@ export interface IProximityAlertTriggered {
    * Пользователь, вызвавший предупреждение.
    * User that triggered the alert.
    */
-  traveler: User;
+  traveler: IUser;
 
   /**
    * Пользователь, установивший предупреждение.
    * User that set the alert.
    */
-  watcher: User;
+  watcher: IUser;
 
   /**
    * Расстояние между пользователями.

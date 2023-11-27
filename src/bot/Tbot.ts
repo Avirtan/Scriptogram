@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IRespone, IUpdate } from "./types/IResponse";
+import { IRespone, IUpdate } from "./types/core/IResponse";
 import { IHandler } from "./handlers/IHandler";
 import { MethodHandler } from "./methods/MethodsHandler";
 import { RequestHandler } from "./utils/RequestHandler";
