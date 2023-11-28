@@ -1,5 +1,5 @@
 import { TBot } from "./bot/Tbot";
-import { IUpdate } from "./bot/types/IResponse";
+import { IUpdate } from "./bot/types/core/IResponse";
 import { InlineQueryHandler } from "./example/handlers/InlineQueryHandler";
 import { MessageHandler } from "./example/handlers/MessageHandler";
 
