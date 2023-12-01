@@ -1,8 +1,8 @@
 import axios from "axios";
-import { IRespone, IUpdate } from "./types/IResponse";
 import { IHandler } from "./handlers/IHandler";
 import { MethodHandler } from "./methods/MethodsHandler";
 import { RequestHandler } from "./utils/RequestHandler";
+import { IRespone, IUpdate } from "./types";
 
 export class TBot {
   private _id_update: number;
