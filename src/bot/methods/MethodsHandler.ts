@@ -1,5 +1,5 @@
 import { RequestHandler } from "../utils/RequestHandler";
-import { ISendMessage } from "./Types/ISendMessage";
+import { ISendMessage } from "./types/message/ISendMessage";
 
 export class MethodHandler {
   private _requestHandler: RequestHandler;
