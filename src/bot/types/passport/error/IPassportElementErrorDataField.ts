@@ -1,35 +1,45 @@
 /**
- * Описывает данные, необходимые для расшифровки и аутентификации EncryptedPassportElement. См. документацию Telegram
- * Passport для полного описания процессов расшифровки данных и аутентификации.
+ * Представляет проблему в одном из полей данных, предоставленных пользователем. Ошибка считается устраненной,
+ * когда значение поля изменится.
  *
- * Describes data required for decrypting and authenticating EncryptedPassportElement. See the Telegram Passport
- * Documentation for a complete description of the data decryption and authentication processes.
+ * Represents an issue in one of the data fields that was provided by the user. The error is considered resolved
+ * when the field's value changes.
  *
- * @see {@link https://core.telegram.org/bots/api#encryptedcredentials}
+ * @see {@link https://core.telegram.org/bots/api#passportelementerrordatafield}
  */
-export interface IEncryptedCredentials {
-    /**
-     * Base64-кодированные зашифрованные JSON-сериализованные данные с уникальной пользовательской нагрузкой,
-     * хэшами данных и секретами, необходимыми для расшифровки и аутентификации EncryptedPassportElement.
-     *
-     * Base64-encoded encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for
-     * EncryptedPassportElement decryption and authentication.
-     */
-    data: string;
-  
-    /**
-     * Base64-кодированный хэш данных для аутентификации данных.
-     *
-     * Base64-encoded data hash for data authentication.
-     */
-    hash: string;
-  
-    /**
-     * Base64-кодированный секрет, зашифрованный с помощью открытого RSA-ключа бота, необходимый для расшифровки
-     * данных.
-     *
-     * Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption.
-     */
-    secret: string;
-  }
-  
+export interface IPassportElementErrorDataField {
+  /**
+   * Источник ошибки, должен быть data.
+   *
+   * Error source, must be data.
+   */
+  source: string;
+
+  /**
+   * Раздел Telegram Passport пользователя, в котором произошла ошибка.
+   *
+   * The section of the user's Telegram Passport which has the error.
+   */
+  type: string;
+
+  /**
+   * Название поля данных, в котором произошла ошибка.
+   *
+   * Name of the data field which has the error.
+   */
+  field_name: string;
+
+  /**
+   * Base64-кодированный хэш данных.
+   *
+   * Base64-encoded data hash.
+   */
+  data_hash: string;
+
+  /**
+   * Сообщение об ошибке.
+   *
+   * Error message.
+   */
+  message: string;
+}
