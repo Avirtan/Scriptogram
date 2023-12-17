@@ -1,3 +1,6 @@
+import { IPollOption } from ".";
+import { IMessageEntity } from "..";
+
 /**
  * Этот объект содержит информацию об опросе.
  *

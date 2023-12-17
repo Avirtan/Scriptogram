@@ -1,3 +1,12 @@
+import {
+  IInputFile,
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки аудиофайлов, если вы хотите, чтобы клиенты Telegram отображали файл как проигрываемое голосовое сообщение.
  * Для этого ваш аудиофайл должен быть в формате .OGG, закодированным с использованием OPUS (другие форматы могут быть отправлены как Audio или Document).

@@ -1,3 +1,12 @@
+import {
+  IInputFile,
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки общих файлов. При успехе возвращается отправленное сообщение.
  * Bots в настоящее время могут отправлять файлы любого типа размером до 50 МБ, это ограничение может измениться в будущем.

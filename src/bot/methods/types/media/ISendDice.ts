@@ -1,3 +1,10 @@
+import {
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки анимированной эмодзи, которая будет отображать случайное значение.
  * При успехе возвращается отправленное сообщение.

@@ -1,3 +1,12 @@
+import {
+  IInputFile,
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки аудиофайлов, если вы хотите, чтобы клиенты Telegram показывали их в музыкальном плеере.
  * Ваше аудио должно быть в формате .MP3 или .M4A. При успехе возвращается отправленное сообщение.

@@ -1,3 +1,11 @@
+import {
+  IInputFile,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки видеосообщений. Начиная с v.4.0, клиенты Telegram поддерживают круглые квадратные MPEG4-видео длиной до 1 минуты.
  * При успехе возвращается отправленное сообщение.
@@ -27,7 +35,7 @@ export interface ISendVideoNote {
    *
    * Video note to send. Pass a file_id as String to send a video note that exists on the Telegram servers (recommended) or upload a new video using multipart/form-data.
    */
-  video_note: InputFile | string;
+  video_note: IInputFile | string;
 
   /**
    * Опционально. Длительность отправленного видео в секундах.
@@ -48,7 +56,7 @@ export interface ISendVideoNote {
    *
    * Thumbnail of the file sent; can be ignored if thumbnail generation for the file is supported server-side.
    */
-  thumbnail?: InputFile | string;
+  thumbnail?: IInputFile | string;
 
   /**
    * Опционально. Отправлять сообщение без звука.

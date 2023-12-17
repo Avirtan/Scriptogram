@@ -1,3 +1,6 @@
+import { ILoginUrl, ISwitchInlineQueryChosenChat } from ".";
+import { IWebAppInfo } from "..";
+
 /**
  * Этот объект представляет одну кнопку встроенной клавиатуры. Необходимо использовать ровно одно из необязательных полей.
  *
@@ -66,7 +69,7 @@ export interface IInlineKeyboardButton {
    *
    * Optional. Description of the game that will be launched when the user presses the button.
    */
-  callback_game?: ICallbackGame;
+  callback_game?: any; // ICallbackGame;
 
   /**
    * Опционально. Оплата. Укажите true, чтобы отправить кнопку "Оплатить".

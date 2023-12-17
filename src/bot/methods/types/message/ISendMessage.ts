@@ -1,3 +1,11 @@
+import {
+  IForceReply,
+  IInlineKeyboardMarkup,
+  IMessageEntity,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки текстовых сообщений. При успехе возвращается отправленное сообщение.
  *
@@ -80,5 +88,10 @@ export interface ISendMessage {
    *
    * Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
    */
-  reply_markup?: IInlineKeyboardMarkup | IReplyKeyboardMarkup | IReplyKeyboardRemove | IForceReply;
+  reply_markup?:
+    | IInlineKeyboardMarkup
+    | IReplyKeyboardMarkup
+    | IReplyKeyboardRemove
+    | IForceReply
+    | string;
 }

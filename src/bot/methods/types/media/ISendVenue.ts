@@ -1,3 +1,10 @@
+import {
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки информации о месте. При успехе возвращается отправленное сообщение.
  *

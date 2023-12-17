@@ -1,3 +1,5 @@
+import { IMessageEntity } from "..";
+
 /**
  * Представляет фото для отправки.
  *
