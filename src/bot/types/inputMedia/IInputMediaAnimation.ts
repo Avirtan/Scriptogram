@@ -1,3 +1,5 @@
+import { IInputFile, IMessageEntity } from "..";
+
 /**
  * Представляет анимацию (файл GIF или H.264/MPEG-4 AVC видео без звука) для отправки.
  *

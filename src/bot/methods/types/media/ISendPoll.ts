@@ -1,3 +1,11 @@
+import {
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки опроса. При успехе возвращается отправленное сообщение.
  *

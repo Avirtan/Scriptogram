@@ -11,7 +11,10 @@ export class MessageHandler implements IHandler {
     this.methodHandler = methodHandler;
   }
 
-  action(data: any): void {
-    // console.log(data);
+  async action(data: any): Promise<void> {
+    var msg = await this.methodHandler.sendMessage({
+      chat_id: data.message["from"]["id"],
+      text: "tewt",
+    });
   }
 }

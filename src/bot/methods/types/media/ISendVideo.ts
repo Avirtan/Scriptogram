@@ -1,3 +1,12 @@
+import {
+  IInputFile,
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки видеофайлов. Клиенты Telegram поддерживают MPEG4-видео (другие форматы могут быть отправлены как Document).
  * При успехе возвращается отправленное сообщение. Bots в настоящее время могут отправлять видеофайлы размером до 50 МБ, это ограничение может измениться в будущем.

@@ -1,3 +1,6 @@
+import { IKeyboardButtonRequestUser, IKeyboardButtonRequestChat, IKeyboardButtonPollType } from ".";
+import { IWebAppInfo } from "..";
+
 /**
  * Этот объект представляет одну кнопку клавиатуры ответов.
  *

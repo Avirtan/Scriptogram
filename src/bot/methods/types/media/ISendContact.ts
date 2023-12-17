@@ -1,3 +1,10 @@
+import {
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки контактных данных. При успехе возвращается отправленное сообщение.
  *

@@ -1,3 +1,10 @@
+import {
+  IInputMediaAudio,
+  IInputMediaDocument,
+  IInputMediaPhoto,
+  IInputMediaVideo,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки группы фотографий, видео, документов или аудио как альбома.
  * На успех возвращается массив сообщений, которые были отправлены.

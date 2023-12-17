@@ -63,8 +63,8 @@ export class TBot {
     for await (const response of this) {
       for (const update of response.result) {
         if (update.message != null) {
-          if (this._funcHandler.has(update.message.text)) {
-            let func = this._funcHandler.get(update.message.text);
+          if (this._funcHandler.has(update.message.text!)) {
+            let func = this._funcHandler.get(update.message.text!);
             func!(update);
           }
         }

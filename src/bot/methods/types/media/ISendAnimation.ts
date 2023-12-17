@@ -1,3 +1,12 @@
+import {
+  IInputFile,
+  IMessageEntity,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки файлов анимации (GIF или видео H.264/MPEG-4 AVC без звука).
  * При успехе возвращается отправленное сообщение. Bots в настоящее время могут отправлять файлы анимации размером до 50 МБ, это ограничение может измениться в будущем.

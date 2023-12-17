@@ -1,3 +1,5 @@
+import { IInputFile, IMessageEntity } from "..";
+
 /**
  * Представляет общий файл, который должен быть отправлен.
  *
