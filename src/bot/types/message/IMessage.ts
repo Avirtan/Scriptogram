@@ -1,3 +1,44 @@
+import {
+  IAnimation,
+  IAudio,
+  IChat,
+  IChatShared,
+  IContact,
+  IDice,
+  IDocument,
+  IForumTopicClosed,
+  IForumTopicCreated,
+  IForumTopicEdited,
+  IForumTopicReopened,
+  IGeneralForumTopicHidden,
+  IGeneralForumTopicUnhidden,
+  IInlineKeyboardMarkup,
+  ILocation,
+  IMessageAutoDeleteTimerChanged,
+  IMessageEntity,
+  IPhotoSize,
+  IPoll,
+  IProximityAlertTriggered,
+  IStory,
+  IUser,
+  IUserShared,
+  IVenue,
+  IVideo,
+  IVideoChatEnded,
+  IVideoChatParticipantsInvited,
+  IVideoChatScheduled,
+  IVideoChatStarted,
+  IVideoNote,
+  IVoice,
+  IWebAppData,
+  IWriteAccessAllowed,
+} from "..";
+import { IGame } from "../game/IGame";
+import { IPassportData } from "../passport/IPassportData";
+import { IInvoice } from "../payment/IInvoice";
+import { ISuccessfulPayment } from "../payment/ISuccessfulPayment";
+import { ISticker } from "../sticker/ISticker";
+
 /**
  * Объект, представляющий сообщение.
  *

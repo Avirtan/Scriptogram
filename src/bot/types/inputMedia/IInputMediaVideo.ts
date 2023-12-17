@@ -1,3 +1,5 @@
+import { IInputFile, IMessageEntity } from "..";
+
 /**
  * Представляет видео для отправки.
  *

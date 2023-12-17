@@ -11,3 +11,4 @@ export * from "./message";
 export * from "./poll";
 export * from "./user";
 export * from "./webApp";
+export * from "./inline";

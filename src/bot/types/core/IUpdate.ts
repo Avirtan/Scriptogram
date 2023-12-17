@@ -1,3 +1,14 @@
+import {
+  IMessage,
+  ICallbackQuery,
+  IPoll,
+  IPollAnswer,
+  IChatMemberUpdated,
+  IChatJoinRequest,
+  IChosenInlineResult,
+  IInlineQuery,
+} from "..";
+
 /**
  * Этот объект представляет входящее обновление.
  * В каждом обновлении может присутствовать только один из опциональных параметров.
