@@ -1,5 +1,6 @@
 import { IHandler } from "../../bot/handlers/IHandler";
 import { MethodHandler } from "../../bot/methods/MethodsHandler";
+import { IUpdate } from "../../bot/types";
 
 export class MessageHandler implements IHandler {
   typeMask: number;
@@ -11,9 +12,9 @@ export class MessageHandler implements IHandler {
     this.methodHandler = methodHandler;
   }
 
-  async action(data: any): Promise<void> {
+  async action(data: IUpdate): Promise<void> {
     var msg = await this.methodHandler.sendMessage({
-      chat_id: data.message["from"]["id"],
+      chat_id: data.message?.from?.id!,
       text: "tewt",
     });
   }

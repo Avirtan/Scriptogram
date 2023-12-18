@@ -7,6 +7,8 @@ import {
   IChatJoinRequest,
   IChosenInlineResult,
   IInlineQuery,
+  IShippingQuery,
+  IPreCheckoutQuery,
 } from "..";
 
 /**

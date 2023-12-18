@@ -1,5 +1,6 @@
 import { IHandler } from "../../bot/handlers/IHandler";
 import { MethodHandler } from "../../bot/methods/MethodsHandler";
+import { IUpdate } from "../../bot/types";
 
 export class InlineQueryHandler implements IHandler {
   methodHandler: MethodHandler;
@@ -10,10 +11,10 @@ export class InlineQueryHandler implements IHandler {
     this.methodHandler = methodHandler;
   }
 
-  async action(data: any): Promise<void> {
+  async action(data: IUpdate): Promise<void> {
     console.log(data.message);
     this.methodHandler.sendMessage({
-      chat_id: data.message["from"]["id"],
+      chat_id: data.message?.from?.id!,
       text: "tewt",
     });
     // console.log(da)

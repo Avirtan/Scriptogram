@@ -1,6 +1,6 @@
 import { IHandler } from "../../bot/handlers/IHandler";
 import { MethodHandler } from "../../bot/methods/MethodsHandler";
-import { IInlineKeyboardButton, IInlineKeyboardMarkup } from "../../bot/types";
+import { IInlineKeyboardButton, IInlineKeyboardMarkup, IUpdate } from "../../bot/types";
 
 export class KeyboardHandler implements IHandler {
   methodHandler: MethodHandler;
@@ -11,7 +11,7 @@ export class KeyboardHandler implements IHandler {
     this.methodHandler = methodHandler;
   }
 
-  async action(data: any): Promise<void> {
+  async action(data: IUpdate): Promise<void> {
     if (data.message?.from == null) {
       return;
     }
