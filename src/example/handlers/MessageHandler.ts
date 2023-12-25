@@ -1,3 +1,4 @@
+import { UserDataRequest } from "../..";
 import { IHandler } from "../../bot/handlers/IHandler";
 import { MethodHandler } from "../../bot/methods/MethodsHandler";
 import { IUpdate } from "../../bot/types";
@@ -12,9 +13,11 @@ export class MessageHandler implements IHandler {
     this.methodHandler = methodHandler;
   }
 
-  async action(data: IUpdate): Promise<void> {
+  async action(data: IUpdate, userDataRequest?: UserDataRequest): Promise<void> {
+    console.log(userDataRequest?.Msg);
+    console.log(userDataRequest?.IdUser);
     var msg = await this.methodHandler.sendMessage({
-      chat_id: data.message?.from?.id!,
+      chat_id: userDataRequest?.IdUser!,
       text: "tewt",
     });
   }
