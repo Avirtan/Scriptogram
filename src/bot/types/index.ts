@@ -14,3 +14,4 @@ export * from "./webApp";
 export * from "./inline";
 export * from "./payment";
 export * from "./passport";
+export * from "./sticker";

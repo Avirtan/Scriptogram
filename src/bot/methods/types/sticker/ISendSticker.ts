@@ -1,3 +1,11 @@
+import {
+  IInputFile,
+  IInlineKeyboardMarkup,
+  IReplyKeyboardMarkup,
+  IReplyKeyboardRemove,
+  IForceReply,
+} from "../../../types";
+
 /**
  * Используйте этот метод для отправки статических .WEBP, анимированных .TGS или видео .WEBM стикеров. При успехе возвращается отправленное сообщение.
  *

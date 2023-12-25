@@ -1,3 +1,6 @@
+import { IChatPhoto, IChatPermissions, IChatLocation } from ".";
+import { IMessage } from "..";
+
 /**
  * Этот объект представляет чат.
  *

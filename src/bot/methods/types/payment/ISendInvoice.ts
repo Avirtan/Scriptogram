@@ -1,3 +1,5 @@
+import { IInlineKeyboardMarkup, ILabeledPrice } from "../../../types";
+
 /**
  * Используйте этот метод для отправки счетов. При успехе возвращается отправленное сообщение.
  *
@@ -60,7 +62,7 @@ export interface ISendInvoice {
    *
    * Price breakdown, a JSON-serialized list of components (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)
    */
-  prices: IILabeledPrice[];
+  prices: ILabeledPrice[];
 
   /**
    * Максимальная сумма для чаевых в мелких единицах валюты (целое число, не float/double).

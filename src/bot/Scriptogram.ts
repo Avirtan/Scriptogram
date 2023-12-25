@@ -4,7 +4,7 @@ import { MethodHandler } from "./methods/MethodsHandler";
 import { RequestHandler } from "./utils/RequestHandler";
 import { IRespone, IUpdate } from "./types";
 
-export class TBot {
+export class Scriptogram {
   private _id_update: number;
   private _token: string;
   private _handlers: Array<IHandler>;

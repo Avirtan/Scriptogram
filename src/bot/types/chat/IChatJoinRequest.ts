@@ -1,3 +1,6 @@
+import { IChat, IChatInviteLink } from ".";
+import { IUser } from "..";
+
 /**
  * Представляет запрос на вступление, отправленный в чат.
  *

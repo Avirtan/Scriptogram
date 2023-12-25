@@ -1,3 +1,6 @@
+import { IChat, IChatMember, IChatInviteLink } from ".";
+import { IUser } from "..";
+
 /**
  * Представляет изменения в статусе участника чата.
  *

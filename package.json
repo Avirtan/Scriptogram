@@ -1,17 +1,16 @@
 {
   "name": "scriptogram",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.5.1",
+  "description": "Lib for telegram",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon",
-    "prestart:prod": "tsc",
-    "start:prod": "node dist/main.js"
+    "build": "tsc"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "avirtam",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.4.5",
     "nodemon": "^3.0.1",
@@ -19,5 +18,9 @@
   },
   "dependencies": {
     "axios": "^1.4.0"
-  }
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
 }

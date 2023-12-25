@@ -1,4 +1,4 @@
-import { IBotCommandScope } from "../../../types";
+import { IBotCommand, IBotCommandScope } from "../../../types";
 
 /**
  * Используйте этот метод для изменения списка команд бота.
@@ -30,25 +30,4 @@ export interface ISetMyCommands {
    * If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands.
    */
   language_code?: string;
-}
-
-/**
- * Объект описания команды бота.
- *
- * Object describing a bot command.
- */
-export interface IBotCommand {
-  /**
-   * Название команды (до 32 символов).
-   *
-   * The name of the command (up to 32 characters).
-   */
-  command: string;
-
-  /**
-   * Описание команды (до 256 символов).
-   *
-   * Description of the command (up to 256 characters).
-   */
-  description: string;
 }

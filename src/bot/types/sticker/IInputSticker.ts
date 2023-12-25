@@ -1,3 +1,6 @@
+import { IInputFile } from "..";
+import { IMaskPosition } from "./IMaskPosition";
+
 /**
  * Описывает стикер для добавления в набор стикеров.
  *
