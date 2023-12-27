@@ -1,14 +1,5 @@
 import { IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод, чтобы остановить обновление сообщения о живом местоположении
- * до истечения live_period. При успешном выполнении, если сообщение не является встроенным,
- * возвращается отредактированное сообщение, в противном случае возвращается True.
- *
- * Use this method to stop updating a live location message before live_period expires.
- * On success, if the message is not an inline message, the edited Message is returned, otherwise True is returned.
- * @see {@link https://core.telegram.org/bots/api#stopmessagelivelocation}
- */
 export interface IStopMessageLiveLocation {
   /**
    * Обязательно, если inline_message_id не указан.

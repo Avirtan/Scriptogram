@@ -1,14 +1,5 @@
 import { IInlineQueryResult, IInlineQueryResultsButton } from "../../../types";
 
-/**
- * Используйте этот метод для отправки ответов на запросы встроенного поиска. При успехе возвращается True.
- * Не более 50 результатов для каждого запроса допускается.
- *
- * Use this method to send answers to an inline query. On success, True is returned.
- * No more than 50 results per query are allowed.
- *
- * @see {@link https://core.telegram.org/bots/api#answerinlinequery}
- */
 export interface IAnswerInlineQuery {
   /**
    * Уникальный идентификатор отвеченного запроса.

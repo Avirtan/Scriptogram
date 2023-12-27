@@ -1,15 +1,3 @@
-/**
- * Используйте этот метод для бана пользователя в группе, супергруппе или канале.
- * В случае с супергруппами и каналами пользователь не сможет вернуться в чат самостоятельно с помощью пригласительных ссылок и т. д., пока не будет снят бан.
- * Для выполнения этой операции бот должен быть администратором в чате и иметь соответствующие права администратора.
- * При успехе возвращается True.
- *
- * Use this method to ban a user in a group, a supergroup or a channel.
- * In the case of supergroups and channels, the user will not be able to return to the chat on their own using invite links, etc., unless unbanned first.
- * The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#banchatmember}
- */
 export interface IBanChatMember {
   /**
    * Уникальный идентификатор группы или имя пользователя супергруппы или канала (в формате @channelusername).

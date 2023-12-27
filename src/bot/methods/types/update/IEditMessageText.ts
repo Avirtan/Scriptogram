@@ -1,15 +1,5 @@
 import { IMessageEntity, IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод для редактирования текстовых и игровых сообщений.
- * При успехе, если отредактированное сообщение не является встроенным,
- * возвращается отредактированное сообщение, в противном случае возвращается True.
- *
- * Use this method to edit text and game messages.
- * On success, if the edited message is not an inline message,
- * the edited Message is returned, otherwise True is returned.
- * @see {@link https://core.telegram.org/bots/api#editmessagetext}
- */
 export interface IEditMessageText {
   /**
    * Опционально. Обязательно, если inline_message_id не указан.

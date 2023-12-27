@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для установки обложки для набора стикеров с кастомными эмодзи. При успехе возвращается True.
- *
- * Use this method to set the thumbnail of a custom emoji sticker set. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setcustomemojistickersetthumbnail}
- */
 export interface ISetCustomEmojiStickerSetThumbnail {
   /**
    * Название набора стикеров.

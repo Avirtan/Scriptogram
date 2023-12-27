@@ -1,16 +1,5 @@
 import { IShippingOption } from "../../../types";
 
-/**
- * Используйте этот метод для ответа на запросы о доставке.
- * Если вы отправили счет с запросом адреса доставки и был указан параметр is_flexible, Bot API отправит обновление с полем shipping_query боту.
- * При успехе возвращается True.
- *
- * Use this method to reply to shipping queries.
- * If you sent an invoice requesting a shipping address and the parameter is_flexible was specified,
- * the Bot API will send an Update with a shipping_query field to the bot.
- * On success, True is returned.
- * @see {@link https://core.telegram.org/bots/api#answershippingquery}
- */
 export interface IAnswerShippingQuery {
   /**
    * Уникальный идентификатор запроса, на который нужно ответить.

@@ -1,15 +1,3 @@
-/**
- * Используйте этот метод для повышения или понижения пользователя в супергруппе или канале.
- * Бот должен быть администратором в чате и иметь соответствующие права администратора для выполнения этого действия.
- * Передайте False для всех логических параметров, чтобы понизить пользователя.
- * При успехе возвращается True.
- *
- * Use this method to promote or demote a user in a supergroup or a channel.
- * The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights.
- * Pass False for all boolean parameters to demote a user.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#promotechatmember}
- */
 export interface IPromoteChatMember {
   /**
    * Уникальный идентификатор чата или имя пользователя целевого канала (в формате @channelusername).

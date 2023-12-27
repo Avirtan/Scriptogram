@@ -7,14 +7,6 @@ import {
   IForceReply,
 } from "../../../types";
 
-/**
- * Используйте этот метод для отправки видеофайлов. Клиенты Telegram поддерживают MPEG4-видео (другие форматы могут быть отправлены как Document).
- * При успехе возвращается отправленное сообщение. Bots в настоящее время могут отправлять видеофайлы размером до 50 МБ, это ограничение может измениться в будущем.
- *
- * Use this method to send video files, Telegram clients support MPEG4 videos (other formats may be sent as Document). On success, the sent Message is returned.
- * Bots can currently send video files of up to 50 MB in size, this limit may be changed in the future.
- * @see {@link https://core.telegram.org/bots/api#sendvideo}
- */
 export interface ISendVideo {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

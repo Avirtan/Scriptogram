@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для редактирования неосновной пригласительной ссылки, созданной ботом. Бот должен быть администратором в чате и иметь соответствующие права администратора для выполнения этой операции. При успехе возвращается отредактированная пригласительная ссылка в виде объекта ChatInviteLink.
- *
- * Use this method to edit a non-primary invite link created by the bot. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Returns the edited invite link as a ChatInviteLink object.
- * @see {@link https://core.telegram.org/bots/api#editchatinvitelink}
- */
 export interface IEditChatInviteLink {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

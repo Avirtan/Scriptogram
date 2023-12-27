@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для установки заголовка созданного набора стикеров. При успехе возвращается True.
- *
- * Use this method to set the title of a created sticker set. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setstickersettitle}
- */
 export interface ISetStickerSetTitle {
   /**
    * Название набора стикеров.

@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для изменения названия и значка темы в чате форума супергруппы. Бот должен быть администратором в чате для выполнения этой операции и должен иметь права администратора can_manage_topics, если он не создатель темы. Возвращает True в случае успеха.
- *
- * Use this method to edit name and icon of a topic in a forum supergroup chat. The bot must be an administrator in the chat for this to work and must have can_manage_topics administrator rights, unless it is the creator of the topic. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#editforumtopic}
- */
 export interface IEditForumTopic {
   /**
    * Уникальный идентификатор целевой супергруппы или имя пользователя целевой супергруппы (в формате @supergroupusername).

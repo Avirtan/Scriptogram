@@ -1,18 +1,5 @@
-import {
-  IInputMediaAudio,
-  IInputMediaDocument,
-  IInputMediaPhoto,
-  IInputMediaVideo,
-} from "../../../types";
+import { IInputMediaAudio, IInputMediaDocument, IInputMediaPhoto, IInputMediaVideo } from "../../../types";
 
-/**
- * Используйте этот метод для отправки группы фотографий, видео, документов или аудио как альбома.
- * На успех возвращается массив сообщений, которые были отправлены.
- *
- * Use this method to send a group of photos, videos, documents, or audios as an album.
- * On success, an array of Messages that were sent is returned.
- * @see {@link https://core.telegram.org/bots/api#sendmediagroup}
- */
 export interface ISendMediaGroup {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

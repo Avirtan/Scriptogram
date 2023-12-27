@@ -1,12 +1,3 @@
-/**
- * Используйте этот метод для получения данных таблиц высоких счетов.
- * Вернет счет указанного пользователя и нескольких его соседей в игре.
- * Возвращает массив объектов GameHighScore.
- *
- * Use this method to get data for high score tables. Will return the score of the specified user
- * and several of their neighbors in a game. Returns an Array of GameHighScore objects.
- * @see {@link https://core.telegram.org/bots/api#getgamehighscores}
- */
 export interface IGetGameHighScores {
   /**
    * Идентификатор целевого пользователя.

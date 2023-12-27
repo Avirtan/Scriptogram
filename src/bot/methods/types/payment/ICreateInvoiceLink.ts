@@ -1,13 +1,5 @@
 import { ILabeledPrice } from "../../../types";
 
-/**
- * Используйте этот метод для создания ссылки на инвойс.
- * При успехе возвращается созданная ссылка на инвойс в виде строки.
- *
- * Use this method to create a link for an invoice.
- * Returns the created invoice link as String on success.
- * @see {@link https://core.telegram.org/bots/api#createinvoicelink}
- */
 export interface ICreateInvoiceLink {
   /**
    * Название продукта, от 1 до 32 символов.

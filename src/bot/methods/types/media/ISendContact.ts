@@ -1,16 +1,5 @@
-import {
-  IInlineKeyboardMarkup,
-  IReplyKeyboardMarkup,
-  IReplyKeyboardRemove,
-  IForceReply,
-} from "../../../types";
+import { IInlineKeyboardMarkup, IReplyKeyboardMarkup, IReplyKeyboardRemove, IForceReply } from "../../../types";
 
-/**
- * Используйте этот метод для отправки контактных данных. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send phone contacts. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendcontact}
- */
 export interface ISendContact {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

@@ -7,12 +7,6 @@ import {
   IForceReply,
 } from "../../../types";
 
-/**
- * Используйте этот метод для отправки фотографий. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send photos. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendphoto}
- */
 export interface ISendPhoto {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

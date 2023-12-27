@@ -1,17 +1,5 @@
 import { IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод для редактирования сообщений о живом местоположении.
- * Местоположение можно редактировать до истечения срока жизни live_period или до явного отключения редактирования
- * с помощью вызова stopMessageLiveLocation.
- * При успешном выполнении, если отредактированное сообщение не является встроенным,
- * возвращается отредактированное сообщение, в противном случае возвращается True.
- *
- * Use this method to edit live location messages.
- * A location can be edited until its live_period expires or editing is explicitly disabled by a call to stopMessageLiveLocation.
- * On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
- * @see {@link https://core.telegram.org/bots/api#editmessagelivelocation}
- */
 export interface IEditMessageLiveLocation {
   /**
    * Обязательно, если inline_message_id не указан.

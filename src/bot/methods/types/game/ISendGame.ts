@@ -1,11 +1,5 @@
 import { IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод для отправки игры. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send a game. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendgame}
- */
 export interface ISendGame {
   /**
    * Уникальный идентификатор целевого чата.

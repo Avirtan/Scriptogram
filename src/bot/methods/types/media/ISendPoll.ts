@@ -6,12 +6,6 @@ import {
   IForceReply,
 } from "../../../types";
 
-/**
- * Используйте этот метод для отправки опроса. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send a native poll. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendpoll}
- */
 export interface ISendPoll {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

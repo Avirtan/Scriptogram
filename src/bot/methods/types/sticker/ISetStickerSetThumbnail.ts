@@ -1,11 +1,5 @@
 import { IInputFile } from "../../../types";
 
-/**
- * Используйте этот метод для установки обложки обычного или маскирующего набора стикеров. Формат файла обложки должен соответствовать формату стикеров в наборе. При успехе возвращается True.
- *
- * Use this method to set the thumbnail of a regular or mask sticker set. The format of the thumbnail file must match the format of the stickers in the set. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setstickersetthumbnail}
- */
 export interface ISetStickerSetThumbnail {
   /**
    * Название набора стикеров.

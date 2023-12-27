@@ -1,17 +1,5 @@
 import { IChatPermissions } from "../../../types";
 
-/**
- * Используйте этот метод для ограничения пользователя в супергруппе.
- * Бот должен быть администратором в супергруппе и иметь соответствующие права администратора для выполнения этого действия.
- * Передайте True для всех разрешений, чтобы снять ограничения с пользователя.
- * При успехе возвращается True.
- *
- * Use this method to restrict a user in a supergroup.
- * The bot must be an administrator in the supergroup for this to work and must have the appropriate administrator rights.
- * Pass True for all permissions to lift restrictions from a user.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#restrictchatmember}
- */
 export interface IRestrictChatMember {
   /**
    * Уникальный идентификатор супергруппы или имя пользователя супергруппы (в формате @supergroupusername).

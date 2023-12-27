@@ -1,11 +1,5 @@
 import { IInputSticker } from "../../../types";
 
-/**
- * Используйте этот метод для создания нового набора стикеров, принадлежащего пользователю. Бот сможет редактировать созданный набор стикеров. При успехе возвращается True.
- *
- * Use this method to create a new sticker set owned by a user. The bot will be able to edit the sticker set thus created. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#createnewstickerset}
- */
 export interface ICreateNewStickerSet {
   /**
    * Идентификатор пользователя-владельца создаваемого набора стикеров.

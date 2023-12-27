@@ -1,15 +1,5 @@
 import { IMessageEntity, IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод для редактирования подписей к сообщениям.
- * При успехе, если отредактированное сообщение не является встроенным,
- * возвращается отредактированное сообщение, в противном случае возвращается True.
- *
- * Use this method to edit captions of messages.
- * On success, if the edited message is not an inline message,
- * the edited Message is returned, otherwise True is returned.
- * @see {@link https://core.telegram.org/bots/api#editmessagecaption}
- */
 export interface IEditMessageCaption {
   /**
    * Опционально. Обязательно, если inline_message_id не указан.

@@ -1,13 +1,5 @@
 import { IMenuButton } from "../../../types";
 
-/**
- * Используйте этот метод, чтобы изменить кнопку меню бота в приватном чате или кнопку меню по умолчанию.
- * Возвращает True при успешном выполнении.
- *
- * Use this method to change the bot's menu button in a private chat, or the default menu button.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setchatmenubutton}
- */
 export interface ISetChatMenuButton {
   /**
    * Опционально. Уникальный идентификатор для целевого приватного чата.

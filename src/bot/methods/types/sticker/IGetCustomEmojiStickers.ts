@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для получения информации о персонализированных стикерах с помощью их идентификаторов. Возвращает массив объектов Sticker.
- *
- * Use this method to get information about custom emoji stickers by their identifiers. Returns an Array of Sticker objects.
- * @see {@link https://core.telegram.org/bots/api#getcustomemojistickers}
- */
 export interface IGetCustomEmojiStickers {
   /**
    * Список идентификаторов персонализированных эмодзи.

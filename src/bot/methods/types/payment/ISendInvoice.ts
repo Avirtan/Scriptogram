@@ -1,12 +1,5 @@
 import { IInlineKeyboardMarkup, ILabeledPrice } from "../../../types";
 
-/**
- * Используйте этот метод для отправки счетов. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send invoices. On success, the sent Message is returned.
- *
- * @see {@link https://core.telegram.org/bots/api#sendinvoice}
- */
 export interface ISendInvoice {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

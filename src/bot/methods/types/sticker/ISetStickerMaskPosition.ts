@@ -1,11 +1,5 @@
 import { IMaskPosition } from "../../../types";
 
-/**
- * Используйте этот метод для изменения позиции маски маскировочного стикера. Стикер должен принадлежать набору, созданному ботом. При успехе возвращается True.
- *
- * Use this method to change the mask position of a mask sticker. The sticker must belong to a sticker set that was created by the bot. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setstickermaskposition}
- */
 export interface ISetStickerMaskPosition {
   /**
    * Идентификатор файла стикера.

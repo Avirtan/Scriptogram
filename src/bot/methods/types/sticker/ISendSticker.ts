@@ -6,12 +6,6 @@ import {
   IForceReply,
 } from "../../../types";
 
-/**
- * Используйте этот метод для отправки статических .WEBP, анимированных .TGS или видео .WEBM стикеров. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendsticker}
- */
 export interface ISendSticker {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

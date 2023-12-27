@@ -1,17 +1,5 @@
-import {
-  IInlineKeyboardMarkup,
-  IReplyKeyboardMarkup,
-  IReplyKeyboardRemove,
-  IForceReply,
-} from "../../../types";
+import { IInlineKeyboardMarkup, IReplyKeyboardMarkup, IReplyKeyboardRemove, IForceReply } from "../../../types";
 
-/**
- * Используйте этот метод для отправки анимированной эмодзи, которая будет отображать случайное значение.
- * При успехе возвращается отправленное сообщение.
- *
- * Use this method to send an animated emoji that will display a random value. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#senddice}
- */
 export interface ISendDice {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).
