@@ -14,6 +14,10 @@ export class Scriptogram {
   private _requestHandler: RequestHandler;
   private _baseUrl: string;
 
+  public get MethodHandler(): MethodHandler {
+    return this._methodHandler;
+  }
+
   constructor(token: string) {
     this._id_update = 0;
     this._token = token;
@@ -55,7 +59,7 @@ export class Scriptogram {
     this._handlers.push(handler);
   }
 
-  public On(msg: string, func: (update: IUpdate) => void) {
+  public On(msg: string, func: (update: IUpdate, dataRequestUser?: UserDataRequest) => void) {
     this._funcHandler.set(msg, func);
   }
 

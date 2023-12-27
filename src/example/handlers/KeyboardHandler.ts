@@ -15,16 +15,22 @@ export class KeyboardHandler implements IHandler {
     if (data.message?.from == null) {
       return;
     }
+    //create btn
+    //создание кнопки
     var btn = {
       text: "text",
-      callback_data: "call",
+      callback_data: "data",
     } as IInlineKeyboardButton;
+    //create keyboard with btn
+    //создание клавиатуры с кнопкой
     var keyboard = {
       inline_keyboard: [[btn]],
     } as IInlineKeyboardMarkup;
+    //send message
+    //отправка сообщения пользователю
     this.methodHandler.sendMessage({
       chat_id: data.message["from"]["id"],
-      text: "tewt",
+      text: "textFromKeyboardHandlerAndBtn",
       reply_markup: keyboard,
     });
   }
