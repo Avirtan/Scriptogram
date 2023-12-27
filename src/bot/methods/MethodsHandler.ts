@@ -9,17 +9,23 @@ import {
   IChatMember,
   IFile,
   IForumTopic,
+  IGameHighScore,
   IMenuButton,
   IMessage,
   IMessageId,
   IPoll,
+  ISticker,
   IStickerSet,
   IUserProfilePhotos,
 } from "../types";
-import { ISticker } from "../types/sticker/ISticker";
 import { RequestHandler } from "../utils/RequestHandler";
 import {
+  IAddStickerToSet,
   IAnswerCallbackQuery,
+  IAnswerInlineQuery,
+  IAnswerPreCheckoutQuery,
+  IAnswerShippingQuery,
+  IAnswerWebAppQuery,
   IApproveChatJoinRequest,
   IBanChatMember,
   IBanChatSenderChat,
@@ -28,12 +34,16 @@ import {
   ICopyMessage,
   ICreateChatInviteLink,
   ICreateForumTopic,
+  ICreateInvoiceLink,
+  ICreateNewStickerSet,
   IDeclineChatJoinRequest,
   IDeleteChatPhoto,
   IDeleteChatStickerSet,
   IDeleteForumTopic,
   IDeleteMessage,
   IDeleteMyCommands,
+  IDeleteStickerFromSet,
+  IDeleteStickerSet,
   IEditChatInviteLink,
   IEditForumTopic,
   IEditGeneralForumTopic,
@@ -46,14 +56,19 @@ import {
   IForwardMessage,
   IGetChat,
   IGetChatAdministrators,
+  IGetChatMember,
   IGetChatMemberCount,
   IGetChatMenuButton,
+  IGetCustomEmojiStickers,
   IGetFile,
   IGetGameHighScores,
   IGetMyCommands,
   IGetMyDefaultAdministratorRights,
   IGetMyDescription,
+  IGetMyName,
   IGetMyShortDescription,
+  IGetStickerSet,
+  IGetUserProfilePhotos,
   IHideGeneralForumTopic,
   ILeaveChat,
   IPinChatMessage,
@@ -64,15 +79,18 @@ import {
   IRevokeChatInviteLink,
   ISendAnimation,
   ISendAudio,
+  ISendChatAction,
   ISendContact,
   ISendDice,
   ISendDocument,
   ISendGame,
+  ISendInvoice,
   ISendLocation,
   ISendMediaGroup,
   ISendMessage,
   ISendPhoto,
   ISendPoll,
+  ISendSticker,
   ISendVenue,
   ISendVideo,
   ISendVideoNote,
@@ -83,12 +101,20 @@ import {
   ISetChatPhoto,
   ISetChatStickerSet,
   ISetChatTitle,
+  ISetCustomEmojiStickerSetThumbnail,
   ISetGameScore,
   ISetMyCommands,
   ISetMyDefaultAdministratorRights,
   ISetMyDescription,
   ISetMyName,
   ISetMyShortDescription,
+  ISetPassportDataErrors,
+  ISetStickerEmojiList,
+  ISetStickerKeywords,
+  ISetStickerMaskPosition,
+  ISetStickerPositionInSet,
+  ISetStickerSetThumbnail,
+  ISetStickerSetTitle,
   IStopMessageLiveLocation,
   IStopPoll,
   IUnbanChatMember,
@@ -98,34 +124,8 @@ import {
   IUnpinAllForumTopicMessages,
   IUnpinAllGeneralForumTopicMessages,
   IUnpinChatMessage,
+  IUploadStickerFile,
 } from "./types";
-import { IGetChatMember } from "./types/chat/IGetChatMember";
-import { ISendChatAction } from "./types/media/ISendChatAction";
-import { IGetUserProfilePhotos } from "./types/media/IGetUserProfilePhotos";
-import { ISendSticker } from "./types/sticker/ISendSticker";
-import { IGetStickerSet } from "./types/sticker/IGetStickerSet";
-import { IUploadStickerFile } from "./types/sticker/IUploadStickerFile";
-import { IGetCustomEmojiStickers } from "./types/sticker/IGetCustomEmojiStickers";
-import { ICreateNewStickerSet } from "./types/sticker/ICreateNewStickerSet";
-import { IAddStickerToSet } from "./types/sticker/IAddStickerToSet";
-import { ISetStickerPositionInSet } from "./types/sticker/ISetStickerPositionInSet";
-import { IDeleteStickerFromSet } from "./types/sticker/IDeleteStickerFromSet";
-import { ISetStickerEmojiList } from "./types/sticker/ISetStickerEmojiList";
-import { ISetStickerKeywords } from "./types/sticker/ISetStickerKeywords";
-import { ISetStickerMaskPosition } from "./types/sticker/ISetStickerMaskPosition";
-import { ISetStickerSetTitle } from "./types/sticker/ISetStickerSetTitle";
-import { ISetStickerSetThumbnail } from "./types/sticker/ISetStickerSetThumbnail";
-import { ISetCustomEmojiStickerSetThumbnail } from "./types/sticker/ISetCustomEmojiStickerSetThumbnail";
-import { IDeleteStickerSet } from "./types/sticker/IDeleteStickerSet";
-import { IAnswerInlineQuery } from "./types/inline/IAnswerInlineQuery";
-import { IAnswerWebAppQuery } from "./types/inline/IAnswerWebAppQuery";
-import { ISendInvoice } from "./types/payment/ISendInvoice";
-import { ICreateInvoiceLink } from "./types/payment/ICreateInvoiceLink";
-import { IAnswerShippingQuery } from "./types/payment/IAnswerShippingQuery";
-import { IAnswerPreCheckoutQuery } from "./types/payment/IAnswerPreCheckoutQuery";
-import { ISetPassportDataErrors } from "./types/passport/ISetPassportDataErrors";
-import { IGameHighScore } from "../types/game";
-import { IGetMyName } from "./types/bot/IGetMyName";
 
 export class MethodHandler {
   private _requestHandler: RequestHandler;

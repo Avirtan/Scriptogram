@@ -15,3 +15,4 @@ export * from "./inline";
 export * from "./payment";
 export * from "./passport";
 export * from "./sticker";
+export * from "./game";

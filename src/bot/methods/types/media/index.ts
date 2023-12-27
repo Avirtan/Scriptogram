@@ -12,3 +12,5 @@ export * from "./ISendVenue";
 export * from "./ISendVideo";
 export * from "./ISendVideoNote";
 export * from "./ISendVoice";
+export * from "./ISendChatAction";
+export * from "./IGetUserProfilePhotos";

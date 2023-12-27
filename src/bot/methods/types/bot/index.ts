@@ -8,3 +8,4 @@ export * from "./ISetMyDefaultAdministratorRights";
 export * from "./ISetMyDescription";
 export * from "./ISetMyName";
 export * from "./ISetMyShortDescription";
+export * from "./IGetMyName";

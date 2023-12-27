@@ -6,3 +6,6 @@ export * from "./inline";
 export * from "./media";
 export * from "./message";
 export * from "./update";
+export * from "./sticker";
+export * from "./passport";
+export * from "./payment";

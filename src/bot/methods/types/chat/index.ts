@@ -11,7 +11,7 @@ export * from "./IGetChat";
 export * from "./IGetChatAdministrators";
 export * from "./IGetChatMemberCount";
 export * from "./IGetChatMenuButton";
-export * from "./IGetUserProfilePhotos";
+export * from "./IGetChatMember";
 export * from "./ILeaveChat";
 export * from "./IPinChatMessage";
 export * from "./IPromoteChatMember";
