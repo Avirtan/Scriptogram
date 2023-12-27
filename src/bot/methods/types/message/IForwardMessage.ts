@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для пересылки сообщений любого типа. Служебные сообщения пересылать нельзя. При успехе возвращается отправленное сообщение.
- *
- * Use this method to forward messages of any kind. Service messages can't be forwarded. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#forwardmessage}
- */
 export interface IForwardMessage {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

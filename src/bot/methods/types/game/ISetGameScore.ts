@@ -1,14 +1,3 @@
-/**
- * Используйте этот метод для установки счета указанного пользователя в сообщении игры.
- * При успехе, если сообщение не является встроенным, возвращается отправленное сообщение.
- * В противном случае возвращается True. Возвращает ошибку, если новый счет не больше текущего счета пользователя в чате,
- * и force равно False.
- *
- * Use this method to set the score of the specified user in a game message. On success, if the message is not an inline message,
- * the Message is returned, otherwise True is returned. Returns an error, if the new score is not greater than the user's
- * current score in the chat and force is False.
- * @see {@link https://core.telegram.org/bots/api#setgamescore}
- */
 export interface ISetGameScore {
   /**
    * Идентификатор пользователя.

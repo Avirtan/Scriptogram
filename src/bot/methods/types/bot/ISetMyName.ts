@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для изменения имени бота. Возвращает True при успешном выполнении.
- *
- * Use this method to change the bot's name. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setmyname}
- */
 export interface ISetMyName {
   /**
    * Опционально. Новое имя бота; от 0 до 64 символов.

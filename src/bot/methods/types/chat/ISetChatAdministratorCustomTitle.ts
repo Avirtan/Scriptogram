@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для установки пользовательского заголовка для администратора в супергруппе, продвигаемой ботом. При успехе возвращается True.
- *
- * Use this method to set a custom title for an administrator in a supergroup promoted by the bot. Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setchatadministratorcustomtitle}
- */
 export interface ISetChatAdministratorCustomTitle {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевой супергруппы (в формате @supergroupusername).

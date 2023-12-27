@@ -1,10 +1,3 @@
-/**
- * Используйте этот метод для получения списка фотографий профиля пользователя.
- * Возвращает объект UserProfilePhotos.
- *
- * Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object.
- * @see {@link https://core.telegram.org/bots/api#getuserprofilephotos}
- */
 export interface IGetUserProfilePhotos {
   /**
    * Уникальный идентификатор целевого пользователя.

@@ -1,15 +1,5 @@
 import { IInlineKeyboardMarkup } from "../../../types";
 
-/**
- * Используйте этот метод, чтобы редактировать только разметку ответа сообщений.
- * При успешном выполнении, если отредактированное сообщение не является встроенным,
- * возвращается отредактированное сообщение, в противном случае возвращается True.
- *
- * Use this method to edit only the reply markup of messages.
- * On success, if the edited message is not an inline message, the edited Message is returned,
- * otherwise True is returned.
- * @see {@link https://core.telegram.org/bots/api#editmessagereplymarkup}
- */
 export interface IEditMessageReplyMarkup {
   /**
    * Обязательно, если inline_message_id не указан.

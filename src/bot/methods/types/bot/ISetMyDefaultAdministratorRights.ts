@@ -1,15 +1,5 @@
 import { IChatAdministratorRights } from "../../../types";
 
-/**
- * Используйте этот метод, чтобы изменить права администратора по умолчанию, запрашиваемые ботом при добавлении в группы или каналы.
- * Эти права будут предложены пользователям, но они могут изменить список перед добавлением бота.
- * Возвращает True при успешном выполнении.
- *
- * Use this method to change the default administrator rights requested by the bot when it's added as an administrator to groups or channels.
- * These rights will be suggested to users, but they are free to modify the list before adding the bot.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setmydefaultadministratorrights}
- */
 export interface ISetMyDefaultAdministratorRights {
   /**
    * Опционально. Описание новых прав администратора по умолчанию в формате JSON.

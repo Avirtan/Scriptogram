@@ -1,11 +1,3 @@
-/**
- * Используйте этот метод, чтобы изменить краткое описание бота, которое отображается на странице профиля бота и отправляется вместе со ссылкой при публикации бота.
- * Возвращает True при успешном выполнении.
- *
- * Use this method to change the bot's short description, which is shown on the bot's profile page and is sent together with the link when users share the bot.
- * Returns True on success.
- * @see {@link https://core.telegram.org/bots/api#setmyshortdescription}
- */
 export interface ISetMyShortDescription {
   /**
    * Опционально. Новое краткое описание для бота; 0-120 символов.

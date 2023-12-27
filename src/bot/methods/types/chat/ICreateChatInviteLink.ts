@@ -1,9 +1,3 @@
-/**
- * Используйте этот метод для создания дополнительной пригласительной ссылки для чата. Бот должен быть администратором в чате и иметь соответствующие права администратора для выполнения этой операции. Ссылка может быть отозвана с помощью метода revokeChatInviteLink. При успехе возвращается новая пригласительная ссылка в виде объекта ChatInviteLink.
- *
- * Use this method to create an additional invite link for a chat. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. The link can be revoked using the method revokeChatInviteLink. Returns the new invite link as ChatInviteLink object.
- * @see {@link https://core.telegram.org/bots/api#createchatinvitelink}
- */
 export interface ICreateChatInviteLink {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).

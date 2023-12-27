@@ -1,11 +1,5 @@
 import { IBotCommand, IBotCommandScope } from "../../../types";
 
-/**
- * Используйте этот метод для изменения списка команд бота.
- *
- * Use this method to change the list of the bot's commands.
- * @see {@link https://core.telegram.org/bots/api#setmycommands}
- */
 export interface ISetMyCommands {
   /**
    * Список команд бота для установки.

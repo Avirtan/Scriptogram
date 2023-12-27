@@ -1,17 +1,3 @@
-/**
- * Используйте этот метод для ответа на предварительные запросы о проверке.
- * После того, как пользователь подтвердил свои платежные и доставочные данные,
- * Bot API отправляет окончательное подтверждение в виде обновления с полем pre_checkout_query.
- * При успехе возвращается True.
- * Примечание: Bot API должен получить ответ в течение 10 секунд после отправки предварительного запроса о проверке.
- *
- * Use this method to respond to pre-checkout queries.
- * Once the user has confirmed their payment and shipping details,
- * the Bot API sends the final confirmation in the form of an Update with the field pre_checkout_query.
- * On success, True is returned.
- * Note: The Bot API must receive an answer within 10 seconds after the pre-checkout query was sent.
- * @see {@link https://core.telegram.org/bots/api#answerprecheckoutquery}
- */
 export interface IAnswerPreCheckoutQuery {
   /**
    * Уникальный идентификатор запроса, на который нужно ответить.

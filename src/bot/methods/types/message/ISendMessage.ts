@@ -6,12 +6,6 @@ import {
   IReplyKeyboardRemove,
 } from "../../../types";
 
-/**
- * Используйте этот метод для отправки текстовых сообщений. При успехе возвращается отправленное сообщение.
- *
- * Use this method to send text messages. On success, the sent Message is returned.
- * @see {@link https://core.telegram.org/bots/api#sendmessage}
- */
 export interface ISendMessage {
   /**
    * Уникальный идентификатор целевого чата или имя пользователя целевого канала (в формате @channelusername).
@@ -88,10 +82,5 @@ export interface ISendMessage {
    *
    * Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user.
    */
-  reply_markup?:
-    | IInlineKeyboardMarkup
-    | IReplyKeyboardMarkup
-    | IReplyKeyboardRemove
-    | IForceReply
-    | string;
+  reply_markup?: IInlineKeyboardMarkup | IReplyKeyboardMarkup | IReplyKeyboardRemove | IForceReply | string;
 }
