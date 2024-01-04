@@ -50,7 +50,7 @@ export class Scriptogram {
         this._id_update = responeData.result[responeData.result.length - 1].update_id + 1;
         yield responeData;
       } catch (e) {
-        console.log("error " + e);
+        // console.log("error " + e);
       }
     } while (true);
   }
