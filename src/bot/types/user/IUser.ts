@@ -10,7 +10,7 @@ export interface IUser {
    *
    * Unique identifier for this user or bot.
    */
-  id: number;
+  id: number | string;
 
   /**
    * True, если этот пользователь является ботом.

@@ -1,8 +1,8 @@
 export class UserDataRequest {
-  private _idUser: number;
+  private _idUser: string;
   private _msg: string;
 
-  public get IdUser(): number {
+  public get IdUser(): string {
     return this._idUser;
   }
 
@@ -10,8 +10,8 @@ export class UserDataRequest {
     return this._msg;
   }
 
-  public constructor(id: number, msg: string) {
-    this._idUser = id;
+  public constructor(id: number | string, msg: string) {
+    this._idUser = `${id}`;
     this._msg = msg;
   }
 }
