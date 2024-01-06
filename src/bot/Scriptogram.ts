@@ -4,6 +4,7 @@ import { MethodHandler } from "./methods/MethodsHandler";
 import { RequestHandler } from "./utils/RequestHandler";
 import { IRespone, IUpdate } from "./types";
 import { UserDataRequest } from ".";
+import { IState } from "./state/IState";
 
 export class Scriptogram {
   private _id_update: number;
@@ -13,6 +14,7 @@ export class Scriptogram {
   private _methodHandler: MethodHandler;
   private _requestHandler: RequestHandler;
   private _baseUrl: string;
+  private _state: IState;
 
   public get MethodHandler(): MethodHandler {
     return this._methodHandler;
@@ -22,10 +24,14 @@ export class Scriptogram {
     this._id_update = 0;
     this._token = token;
     this._handlers = [];
-    this._funcHandler = new Map<string, (update: IUpdate, dataRequestUser?: UserDataRequest) => {}>();
+    this._funcHandler = new Map<string, (update: IUpdate, dataRequestUser?: UserDataRequest, stateData?: any) => {}>();
     this._baseUrl = `https://api.telegram.org/bot${this._token}/`;
     this._requestHandler = new RequestHandler(this._baseUrl);
     this._methodHandler = new MethodHandler(this._requestHandler);
+  }
+
+  public setState(state: IState) {
+    this._state = state;
   }
 
   private initHandlers() {
@@ -69,14 +75,18 @@ export class Scriptogram {
     for await (const response of this) {
       for (const update of response.result) {
         userDataRequest = this.GetUserDataRequestFromUpdate(update);
+        var stateData = null;
+        if (this._state != null) {
+          stateData = this._state.get(userDataRequest.IdUser);
+        }
         if (update.message != null) {
           if (this._funcHandler.has(update.message.text!)) {
             let func = this._funcHandler.get(update.message.text!);
-            func!(update, userDataRequest);
+            func!(update, userDataRequest, stateData);
           }
         }
         for (const handler of this._handlers) {
-          handler.action(update, userDataRequest);
+          handler.action(update, userDataRequest, stateData);
         }
       }
     }
