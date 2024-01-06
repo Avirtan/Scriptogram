@@ -106,7 +106,11 @@ export class Scriptogram {
     } else if (update.chosen_inline_result != null && update.chosen_inline_result.from != null) {
       return new UserDataRequest(update.chosen_inline_result.from.id, update.chosen_inline_result.query ?? "");
     } else if (update.callback_query != null && update.callback_query.from != null) {
-      return new UserDataRequest(update.callback_query.from.id, update.callback_query.message?.text ?? "");
+      return new UserDataRequest(
+        update.callback_query.from.id,
+        update.callback_query.message?.text ?? "",
+        update.callback_query.data
+      );
     } else if (update.shipping_query != null && update.shipping_query.from != null) {
       return new UserDataRequest(update.shipping_query.from.id, "");
     } else if (update.pre_checkout_query != null && update.pre_checkout_query.from != null) {
