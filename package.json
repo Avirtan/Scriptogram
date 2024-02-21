@@ -1,6 +1,6 @@
 {
   "name": "scriptogram",
-  "version": "0.6.19",
+  "version": "0.6.22",
   "description": "Lib for telegram",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

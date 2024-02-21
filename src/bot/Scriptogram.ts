@@ -10,6 +10,7 @@ export class Scriptogram {
   private _id_update: number;
   private _token: string;
   private _handlers: Array<IHandler>;
+  private _handlersUpdate: Array<Function>;
   private _funcHandler: Map<string, Function>;
   private _methodHandler: MethodHandler;
   private _requestHandler: RequestHandler;
@@ -24,7 +25,8 @@ export class Scriptogram {
     this._id_update = 0;
     this._token = token;
     this._handlers = [];
-    this._funcHandler = new Map<string, (update: IUpdate, dataRequestUser?: UserDataRequest, stateData?: any) => {}>();
+    this._handlersUpdate = [];
+    this._funcHandler = new Map<string, (update: IUpdate, stateData?: any, dataRequestUser?: UserDataRequest) => {}>();
     this._baseUrl = `https://api.telegram.org/bot${this._token}/`;
     this._requestHandler = new RequestHandler(this._baseUrl);
     this._methodHandler = new MethodHandler(this._requestHandler);
@@ -65,7 +67,11 @@ export class Scriptogram {
     this._handlers.push(handler);
   }
 
-  public On(msg: string, func: (update: IUpdate, dataRequestUser?: UserDataRequest) => void) {
+  public OnUpdate(func: (update: IUpdate, dataRequestUser?: UserDataRequest, stateData?: any) => void) {
+    this._handlersUpdate.push(func);
+  }
+
+  public OnCommand(msg: string, func: (update: IUpdate, dataRequestUser?: UserDataRequest) => void) {
     this._funcHandler.set(msg, func);
   }
 
@@ -84,6 +90,9 @@ export class Scriptogram {
             let func = this._funcHandler.get(update.message.text!);
             func!(update, userDataRequest, stateData);
           }
+        }
+        for (const handler of this._handlersUpdate) {
+          handler(update, userDataRequest, stateData);
         }
         for (const handler of this._handlers) {
           handler.action(update, userDataRequest, stateData);

@@ -7,13 +7,19 @@ const bot = new Scriptogram("token");
 var state = new State();
 bot.setState(state);
 // use handlers
-bot.SetHandler(new MessageHandler(state));
-bot.SetHandler(new KeyboardHandler());
+// bot.SetHandler(new MessageHandler(state));
+// bot.SetHandler(new KeyboardHandler());
 
 //use callback
-bot.On("/command", async (update: IUpdate, userDataRequest?: UserDataRequest) => {
+bot.OnCommand("/command", async (update: IUpdate) => {
   await bot.MethodHandler.sendMessage({
-    chat_id: userDataRequest?.IdUser!,
+    chat_id: update?.message?.from?.id!,
+    text: "tewt",
+  });
+});
+bot.OnUpdate(async (update: IUpdate, dataRequestUser?: UserDataRequest) => {
+  await bot.MethodHandler.sendMessage({
+    chat_id: dataRequestUser?.IdUser!,
     text: "tewt",
   });
 });

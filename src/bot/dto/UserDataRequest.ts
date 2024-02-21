@@ -7,7 +7,7 @@ export class UserDataRequest {
     return this._idUser;
   }
 
-  public get Msg(): string {
+  public get Message(): string {
     return this._msg;
   }
 
