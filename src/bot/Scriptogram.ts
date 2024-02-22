@@ -11,6 +11,7 @@ export class Scriptogram {
   private _token: string;
   private _handlers: Array<IHandler>;
   private _handlersUpdate: Array<Function>;
+  private _middlewares: Array<Function>;
   private _funcHandler: Map<string, Function>;
   private _methodHandler: MethodHandler;
   private _requestHandler: RequestHandler;
@@ -26,6 +27,7 @@ export class Scriptogram {
     this._token = token;
     this._handlers = [];
     this._handlersUpdate = [];
+    this._middlewares = [];
     this._funcHandler = new Map<string, (update: IUpdate, stateData?: any, dataRequestUser?: UserDataRequest) => {}>();
     this._baseUrl = `https://api.telegram.org/bot${this._token}/`;
     this._requestHandler = new RequestHandler(this._baseUrl);
@@ -75,16 +77,36 @@ export class Scriptogram {
     this._funcHandler.set(msg, func);
   }
 
+  public use(func: (update: IUpdate, dataRequestUser?: UserDataRequest, stateData?: any) => Promise<boolean>) {
+    this._middlewares.push(func);
+  }
+
   public async StartUpdate() {
     this.initHandlers();
     var userDataRequest = new UserDataRequest(0, "");
+    var isBreak = false;
     for await (const response of this) {
+      isBreak = false;
       for (const update of response.result) {
         userDataRequest = this.GetUserDataRequestFromUpdate(update);
         var stateData = null;
+        console.log("break " + isBreak);
+
         if (this._state != null) {
           stateData = this._state.get(userDataRequest.IdUser);
         }
+        for (const middleware of this._middlewares) {
+          let resultMiddleware = await middleware(update, userDataRequest, stateData);
+          if (!resultMiddleware) {
+            isBreak = true;
+            break;
+          }
+        }
+        console.log("break " + isBreak);
+        if (isBreak) {
+          continue;
+        }
+        console.log(isBreak);
         if (update.message != null) {
           if (this._funcHandler.has(update.message.text!)) {
             let func = this._funcHandler.get(update.message.text!);
