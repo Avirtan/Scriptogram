@@ -90,7 +90,6 @@ export class Scriptogram {
       for (const update of response.result) {
         userDataRequest = this.GetUserDataRequestFromUpdate(update);
         var stateData = null;
-        console.log("break " + isBreak);
 
         if (this._state != null) {
           stateData = this._state.get(userDataRequest.IdUser);
@@ -102,11 +101,9 @@ export class Scriptogram {
             break;
           }
         }
-        console.log("break " + isBreak);
         if (isBreak) {
           continue;
         }
-        console.log(isBreak);
         if (update.message != null) {
           if (this._funcHandler.has(update.message.text!)) {
             let func = this._funcHandler.get(update.message.text!);
