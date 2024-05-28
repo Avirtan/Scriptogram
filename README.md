@@ -20,7 +20,7 @@
 
 ## Установка
 
-Утановка библиотеки доступка через [npm](https://www.npmjs.com/package/scriptogram):
+Утановка библиотеки доступна через [npm](https://www.npmjs.com/package/scriptogram):
 
 ```bash
 npm i scriptogram
