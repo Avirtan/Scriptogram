@@ -1,26 +1,19 @@
 {
   "name": "scriptogram",
-  "version": "0.6.24",
-  "description": "Lib for telegram",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon",
-    "build": "tsc"
-  },
-  "author": "avirtam",
-  "license": "MIT",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
   "devDependencies": {
-    "@types/node": "^20.4.5",
-    "nodemon": "^3.0.1",
-    "ts-node": "^10.9.1"
+    "@types/bun": "latest"
   },
-  "dependencies": {
-    "axios": "^1.4.0"
+  "scripts": {
+    "start": "bun --env-file=.env --watch ./src/index.ts",
+    "migrate_up": "bun --env-file=.env run ./src/migrations/migrate.ts --action up",
+    "migrate_create": "bun --env-file=.env run ./src/migrations/migrate.ts --action create",
+    "migrate_down": "bun --env-file=.env run ./src/migrations/migrate.ts --action down",
+    "migrate_reset": "bun --env-file=.env run ./src/migrations/migrate.ts --action reset"
   },
-  "files": [
-    "dist",
-    "src"
-  ]
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }
